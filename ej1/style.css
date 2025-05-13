@@ -1,0 +1,90 @@
+/*Movil*/
+@media (max-width: 480px){
+    header nav a{
+        text-align: start;
+    }
+
+    body{
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 20px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 768px) {
+    header nav a{
+        text-align: start;
+    }
+    
+    body{
+        background-color: rgb(10, 223, 238);
+        color: rgb(255, 0, 242);
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .movil {
+        display: none;
+    }
+}
+
+
+/*Desktop*/
+@media (min-width: 769px){
+    header nav a{
+        text-align: start;
+    }
+
+    body{
+        padding: auto;
+        text-align: center;
+        background-color: antiquewhite;
+        color: brown;
+    }
+
+    .adap{
+        margin: 0 auto;
+        border: 2px black solid;
+        width: 300px;
+        border-radius:  10px;
+    }
+
+    .desktop {
+        padding-top: 10px ;
+        font-size: 20px;
+    }
+
+    .desktop p {
+        display: inline;
+    }
+
+    .desktop::before{
+        display: inline;
+        content: "[";
+    }
+
+    .desktop::after {
+        content: "]";
+    }
+
+
+    .movil {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+}
