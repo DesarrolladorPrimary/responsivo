@@ -1,0 +1,23 @@
+*{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+nav {
+    margin: 10px;
+    text-align: center;
+    width: 60px;
+    background-color: aliceblue;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+
