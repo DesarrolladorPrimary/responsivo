@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-boton: rgba(60, 154, 118, 0);
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+header {
+    background: #2a6ebb;
+    padding: 0;
+    position: relative;
+    min-height: 56px;
+    border-bottom: 3px solid #174a7a;
+}
+
+.btn-hamburguer {
+    margin: 10px 15px;
+    background: #fff;
+    border: 2px solid #2a6ebb;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    float: left;
+    transition: background 0.3s;
+    z-index: 20;
+    position: relative;
+}
+
+.btn-hamburguer a {
+    color: #2a6ebb;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-hamburguer:hover {
+    background: #e6ecfa;
+    border-color: #174a7a;
+}
+
+.nav-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    border-right: 2px solid #174a7a;
+    background: #f9f9fb;
+    box-shadow: 2px 0 8px rgba(42,110,187,0.08);
+    display: none;
+    z-index: 15;
+    padding-top: 60px;
+    transition: left 0.4s;
+}
+
+.nav-column:target {
+    display: block;
+}
+
+.nav {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 18px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2a6ebb;
+    font-size: 20px;
+    padding: 7px 12px;
+    border-radius: 4px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover, .nav a.volver:hover {
+    background: #2a6ebb;
+    color: #fff;
+}
+
+.volver {
+    font-size: 22px;
+    font-weight: bold;
+    color: #174a7a;
+    margin-bottom: 10px;
+}
+
+
+
+main{
+    box-shadow: 4px 4px 1px 0px black;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 330px;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.form{
+    display: inline-block;
+    margin-top: 60px;
+}
+
+
+
+h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    color: rgb(89, 0, 255);
+}
+
+
+.email {
+    position: relative;
+    bottom: 30px;
+}
+
+.passwd{
+    position: relative;
+    bottom: 20px;
+}
+
+
+label {
+    display: block;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: start;
+}
+
+input{
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+
+input:hover{
+    background-color: azure;
+}
+
+
+.button {
+    margin-top: 20px;
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: var(--color-boton);
+    color: rgb(45, 0, 246);
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.button:hover{
+    background-color: blue;
+    color: azure;
+}
+
+
+@media (min-width: 1024px) {
+    .btn-hamburguer {
+        display: none;
+    }
+    .nav-column {
+        display: block !important;
+        position: static;
+        width: auto;
+        height: auto;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        float: none;
+    }
+    .nav {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav ul {
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+    }
+    .nav ul li {
+        display: inline-block;
+        margin: 0 18px 0 0;
+        vertical-align: middle;
+    }
+    .nav a {
+        display: inline-block;
+        font-size: 20px;
+        color: #fff;
+        background: transparent;
+        border: none;
+        padding: 8px 18px;
+    }
+    .nav a:hover, .nav a.volver:hover {
+        background: #174a7a;
+        color: #fff;
+    }
+    .volver {
+        color: #fff;
+        font-size: 22px;
+        margin-right: 30px;
+    }
+    header {
+        padding: 0 0 10px 0;
+        min-height: 60px;
+        border-bottom: 3px solid #174a7a;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-column {
+        width: 90vw;
+        padding-top: 56px;
+    }
+    .nav a {
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+}

@@ -1,9 +1,18 @@
+:root {
+    --back-box-base: rgb(255, 174, 0);
+    --back--box-tablet: rgb(241, 87, 87);
+    --back--box-movil: rgb(10, 224, 163);
+
+}
+
 *{
-    width: 0;
-    height: 0;
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
 }
 
 nav {
@@ -16,8 +25,139 @@ nav {
 }
 
 nav a {
+    font-size: 16px;
     text-decoration: none;
 }
 
+main{
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 2px black solid;
+    background-color:rgb(222, 166, 70);
+}
+
+
+.box{
+    position: relative;
+    left: 16px;
+    top: 16px;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 40px;
+    background-color:var(--back-box-base);
+}
+
+.box2{
+    position: relative;
+    left: 19rem;
+    top: 16px ;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 40px;
+    background-color:var(--back-box-base);
+}
+.box3{
+    position: relative;
+    top: 24.5rem;
+    right: 10rem;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 40px;
+    background-color: var(--back-box-base);
+}
+
+.box4{
+    position: relative;
+    top: 24.5rem;
+    left: 8rem;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 40px;
+    background-color: var(--back-box-base);
+}
+
+/* Tablet */
+@media (min-width: 426px) and (max-width: 768px) {
+    nav {
+        width: 60px;
+    }
+    
+    nav a {
+        font-size: 16px;
+    }
+
+    main {
+        left: 190px;
+        background-color: salmon;
+    }
+
+    .box{
+        top: 14px;
+        left: 12.9rem;
+        background-color: var(--back--box-tablet);
+    }
+    
+    .box2{
+        left: 19.3rem;
+        top: 11.7rem;
+        bottom: auto;
+        background-color: var(--back--box-tablet);
+        
+    }
+
+    .box3{
+        top: 25rem;
+        right:auto;
+        left: 30px;
+        background-color: var(--back--box-tablet);
+    }
+    
+    .box4{
+        top: 11.7rem;
+        left: auto;
+        right: 15.5rem;
+        background-color: var(--back--box-tablet);
+        
+    }
+    
+}
+
+
+
+/* Movil */
+@media (max-width: 425px){
+    nav{
+        height: 20px;
+        text-align: center;
+    }
+    nav a {
+        font-size: 17px;
+    }
+    
+    main {
+        bottom: auto;
+        top: 50px;
+        height: 500px;
+        width: 200px;
+        background-color: aquamarine;
+    }
+
+    .box,
+    .box2,
+    .box3,
+    .box4 {
+        background-color: var(--back--box-movil);
+        position: relative;
+        display: block;
+        width: 10px;
+        margin-top: 60px;
+        padding: 20px;
+        right: auto;
+        left: 76px;
+        top: auto;
+        bottom: auto;
+    }
+}
 
 
