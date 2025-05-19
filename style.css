@@ -1,35 +1,47 @@
+/* Estilos para el encabezado H1 principal de la página de índice de ejercicios */
+h1{
+    text-align: center; /* Centra el texto del H1 */
+    margin-bottom: 10px; /* Margen inferior para separarlo de la navegación */
+}
+
+/* Estilos para el contenedor de navegación principal (el menú de ejercicios) */
 nav {
-    background-color: #f4f4f4;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 300px;
-    margin: 20px auto;
-    text-align: center; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    border: 2px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Padding interno */
+    max-width: 300px; /* Ancho máximo en vista móvil/base */
+    margin: 20px auto; /* Margen superior/inferior y centrado horizontal */
+    text-align: center; /* Centra los elementos de lista (si son inline-block) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilos para los enlaces (a) dentro de la navegación de ejercicios */
 nav a {
-    display: inline-block; 
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    margin: 10px 5px;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+    display: inline-block; /* Permite que los enlaces tengan padding y margen como bloques, pero fluyan en línea */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color de texto oscuro */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 10px 5px; /* Margen vertical y horizontal para separar los enlaces */
+    padding: 5px 10px; /* Padding interno de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
 }
 
+/* Estilos para los enlaces de navegación al pasar el ratón (hover) */
 nav a:hover {
-    color: #007BFF;
+    color: #007BFF; /* Cambia el color del texto a azul */
 }
 
+/* Media Query para pantallas más grandes (a partir de 768px de ancho) */
 @media (min-width: 768px) {
+    /* Ajusta la navegación para pantallas grandes */
     nav {
-        max-width: 100%;
-        padding: 10px 40px;
+        max-width: 100%; /* Permite que la navegación ocupe más ancho */
+        padding: 10px 40px; /* Ajusta el padding */
     }
 
+    /* Ajusta los márgenes de los enlaces de navegación para pantallas grandes */
     nav a {
-        margin: 0 15px; 
+        margin: 0 15px; /* Elimina el margen vertical y aumenta el horizontal */
     }
 }

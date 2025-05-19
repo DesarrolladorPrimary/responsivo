@@ -1,0 +1,152 @@
+*{ /* Esto es como un "para todo el mundo": quita los rellenos y márgenes que los navegadores ponen por defecto */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Hace que el tamaño de las cajas incluya el borde y el relleno, ¡más fácil de controlar! */
+}
+
+
+
+header nav { /* Para la barra de navegación que está en el encabezado */
+    text-align: start; /* Alinea el texto a la izquierda (o al inicio, según el idioma) */
+    background-color: rgba(103, 194, 234, 0.598); /* Un color de fondo azulito medio transparente */
+    height: 40px; /* Le da una altura fija de 40 píxeles */
+}
+
+header a { /* Para los enlaces (como el de "Volver") que están en el encabezado */
+    position: relative; /* Permite moverlo un poquito desde su sitio original */
+    top: 10px; /* Lo baja 10 píxeles desde arriba */
+    left: 10px; /* Lo mueve 10 píxeles desde la izquierda */
+    color: black; /* El texto del enlace será negro */
+    text-decoration: none; /* Le quita el subrayado típico de los enlaces */
+}
+
+
+main { /* El contenedor principal de la página, donde está el formulario */
+    background-color: aliceblue; /* Un color de fondo azul pálido, como de cuento */
+    border-radius: 10px; /* Redondea las esquinas para que no se vea tan cuadrado */
+    position: relative; /* Permite ajustar su posición */
+    top: 40px; /* Lo baja 100 píxeles desde donde estaría normalmente */
+    max-width: 60rem;  /* Ancho máximo, para que no se estire demasiado en pantallas grandes (1rem es como el tamaño de la letra 'M') */
+    width: 90%;        /* Ocupa el 90% del ancho disponible, así se adapta un poco */
+    border: 1px solid black; /* Un borde negro finito alrededor */
+    margin: 0 auto;  /* Esto lo centra solito en la página (horizontalmente) */
+    padding: 20px;  /* Un espacio interior para que el contenido no esté pegado a los bordes */
+}
+
+.form h1 { /* El título grande que dice "Formulario de Inscripción" */
+    margin-top: 10px; /* Un poquito de espacio por encima del título */
+    margin-bottom: 20px;  /* Más espacio por debajo, para separarlo de los campos */
+    text-align: center; /* Centra el texto del título */
+}
+
+/* Para cada grupito de etiqueta y campo de entrada (como el del textarea solito) */
+.form-group { 
+    margin-bottom: 15px; /* Un espacio debajo de cada grupo, para que no se amontonen */
+}
+
+/* Para las etiquetas (como "Nombre:", "Apellido:", etc.) que están dentro de cualquier 'form-group' o 'form-group-loquesea' */
+[class^="form-group"] label {
+    display: block;      /* Hace que la etiqueta ocupe toda una línea para ella sola */
+    width: 100%;         /* Y que use todo el ancho disponible de su cajita contenedora */
+    margin-bottom: 5px;  /* Un pequeño espacio entre la etiqueta y el campo de abajo */
+    font-weight: bold;   /* Pone el texto de la etiqueta en negrita */
+}
+
+/* Para los campos de texto, email, contraseña, número, fecha y el área de texto grande, que estén dentro de cualquier 'form-group' o 'form-group-loquesea' */
+[class^="form-group"] input[type="text"],
+[class^="form-group"] input[type="email"],
+[class^="form-group"] input[type="password"],
+[class^="form-group"] input[type="number"],
+[class^="form-group"] input[type="date"],
+[class^="form-group"] textarea { 
+    display: block;  /* También ocupan una línea entera para ellos */
+    width: 100%;     /* Y usan todo el ancho de su cajita */
+    padding: 10px;   /* Un espacio interior para que el texto no esté pegado a los bordes del campo */
+    border: 1px solid #ccc; /* Un borde gris clarito */
+    border-radius: 4px; /* Esquinas un poquito redondeadas para los campos */
+    box-sizing: border-box;  /* El tamaño total incluye borde y relleno, ¡qué bien! */
+}
+
+/* Para los grupos de los campos que van de dos en dos (Nombre y Apellido, Edad y Fecha, etc.) */
+.form-group-name,
+.form-group-apellido,
+.form-group-edad,
+.form-group-fecha,
+.form-group-email,
+.form-group-passwd {
+    margin-bottom: 15px; /* Espacio debajo de estos grupos también */
+    display: inline-block;  /* Esto permite que se pongan uno al lado del otro, como si fueran palabras en una línea */
+    width: 48.5%;           /* Cada uno ocupa un poquito menos de la mitad del espacio, para que quepan los dos */
+    vertical-align: top;    /* Si uno es más alto que el otro, se alinean por arriba */
+}
+
+/* Solo para el primer elemento de cada par (Nombre, Edad, Email) */
+.form-group-name,
+.form-group-edad,
+.form-group-email {
+    margin-right: 2%;  /* Un pequeño espacio a la derecha, para separar los dos campos del par */
+}
+
+/* Para el área de texto grande (si necesita algún estilo extra además de los generales) */
+.form-group textarea { 
+    min-height: 100px;  /* Que tenga al menos 100 píxeles de alto, para que se pueda escribir algo decente */
+    resize: vertical;   /* Permite que el usuario la haga más alta si quiere, pero no más ancha */
+}
+
+.form button[type="submit"] { /* El botón de "Inscribirse" o "Enviar" */
+    display: block;  /* Ocupa su propia línea */
+    width: auto;     /* El ancho se ajusta al texto que tenga dentro (en pantallas grandes) */
+    min-width: 200px; /* Pero que al menos mida 200 píxeles de ancho, para que no sea muy chiquito */
+    padding: 10px 30px;  /* Espacio interior, más a los lados que arriba/abajo, para que se vea bien */
+    background-color: #007bff;  /* Un color de fondo azul chulo */
+    color: white; /* Texto del botón en blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas un poquito redondeadas */
+    cursor: pointer; /* El cursor se convierte en una manita al pasar por encima, para indicar que se puede hacer clic */
+    font-size: 16px; /* Tamaño de la letra del botón */
+    margin-top: 20px;  /* Espacio por encima del botón */
+    margin-left: auto;  /* Estos dos juntos (con display:block y width:auto) centran el botón */
+    margin-right: auto; 
+}
+
+.form button[type="submit"]:hover { /* Cuando pasas el ratón por encima del botón */
+    background-color: #0056b3;  /* Cambia el color de fondo a un azul un poco más oscuro */
+}
+
+/* Para cuando la pantalla es como la de una Tablet (entre 768 y 1023 píxeles de ancho) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .form button[type="submit"] { /* Ajustamos un poquito el botón para tablets */
+        min-width: 180px;  /* Un poquito menos de ancho mínimo que en escritorio */
+        padding: 10px 25px;  /* Y un poquito menos de relleno a los lados */
+    }
+    /* Los campos siguen de dos en dos, como en escritorio, porque no hemos dicho lo contrario aquí */
+}
+
+/* Para cuando la pantalla es más pequeña, como la de un Móvil (hasta 767 píxeles de ancho) */
+@media (max-width: 767px) {
+    /* Hacemos que los grupos que iban de dos en dos ahora se pongan uno debajo del otro */
+    .form-group-name,
+    .form-group-apellido,
+    .form-group-edad,
+    .form-group-fecha,
+    .form-group-email,
+    .form-group-passwd {
+        display: block;  /* Vuelven a ocupar una línea entera cada uno */
+        width: 100%;     /* Y usan todo el ancho disponible */
+    }
+
+    /* Quitamos el espacio a la derecha que separaba los pares, ya no hace falta */
+    .form-group-name,
+    .form-group-edad,
+    .form-group-email {
+        margin-right: 0; 
+    }
+
+    .form button[type="submit"] { /* El botón en móviles */
+        width: 100%;  /* Que ocupe todo el ancho, es más fácil de pulsar en pantallas pequeñas */
+        min-width: unset;  /* Quitamos el ancho mínimo, ya no aplica */
+        padding: 10px 15px;  /* Un relleno más estándar para móviles */
+    }
+}
+
+

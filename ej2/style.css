@@ -1,56 +1,61 @@
+/* Definición de variables CSS para colores de fondo reutilizables */
 :root {
-    --back-box-base: rgb(255, 174, 0);
-    --back--box-tablet: rgb(241, 87, 87);
-    --back--box-movil: rgb(10, 224, 163);
-
+    --back-box-base: rgb(255, 174, 0); /* Color base para las cajas */
+    --back--box-tablet: rgb(241, 87, 87); /* Color para las cajas en tablet */
+    --back--box-movil: rgb(10, 224, 163); /* Color para las cajas en móvil */
 }
 
+/* Reseteo de estilos básicos para todos los elementos */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho/alto total */
 }
 
+/* Estilos generales para el cuerpo */
 body{
-    background-color: aliceblue;
+    background-color: aliceblue; /* Color de fondo del cuerpo */
 }
 
+/* Estilos para el elemento de navegación */
 nav {
-    margin: 10px;
-    text-align: center;
-    width: 60px;
-    background-color: aliceblue;
-    border: 1px black solid;
-    border-radius: 10px;
+    margin: 10px; /* Margen alrededor de la navegación */
+    text-align: center; /* Centra el texto dentro de la navegación */
+    width: 60px; /* Ancho de la navegación */
+    background-color: aliceblue; /* Color de fondo de la navegación */
+    border: 1px black solid; /* Borde de la navegación */
+    border-radius: 10px; /* Bordes redondeados para la navegación */
 }
 
+/* Estilos para los enlaces dentro de la navegación */
 nav a {
-    font-size: 16px;
-    text-decoration: none;
+    font-size: 16px; /* Tamaño de fuente para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
+/* Estilos para el contenedor principal */
 main{
-    margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    border: 2px black solid;
-    background-color:rgb(222, 166, 70);
+    margin: 0 auto; /* Centra el contenedor principal horizontalmente */
+    width: 500px; /* Ancho del contenedor principal */
+    height: 500px; /* Alto del contenedor principal */
+    border: 2px black solid; /* Borde del contenedor principal */
+    background-color:rgb(222, 166, 70); /* Color de fondo del contenedor principal */
 }
 
-
+/* Estilos comunes para las cajas (box, box2, box3, box4) en la vista de escritorio */
 .box{
-    position: relative;
-    left: 16px;
-    top: 16px;
-    display: inline-block;
-    border: 2px solid black;
-    padding: 40px;
-    background-color:var(--back-box-base);
+    position: relative; /* Posicionamiento relativo para poder moverlo */
+    left: 16px; /* Desplazamiento a la izquierda */
+    top: 16px; /* Desplazamiento hacia arriba */
+    display: inline-block; /* Permite que las cajas se coloquen en línea y tengan dimensiones */
+    border: 2px solid black; /* Borde de la caja */
+    padding: 40px; /* Padding interno de la caja */
+    background-color:var(--back-box-base); /* Color de fondo usando la variable CSS */
 }
 
 .box2{
     position: relative;
-    left: 19rem;
+    left: 19rem; /* Desplazamiento a la izquierda en unidades rem */
     top: 16px ;
     display: inline-block;
     border: 2px solid black;
@@ -59,8 +64,8 @@ main{
 }
 .box3{
     position: relative;
-    top: 24.5rem;
-    right: 10rem;
+    top: 24.5rem; /* Desplazamiento hacia arriba en unidades rem */
+    right: 10rem; /* Desplazamiento a la derecha en unidades rem */
     display: inline-block;
     border: 2px solid black;
     padding: 40px;
@@ -77,45 +82,49 @@ main{
     background-color: var(--back-box-base);
 }
 
-/* Tablet */
+/* Estilos para Tablet (ancho entre 426px y 768px) */
 @media (min-width: 426px) and (max-width: 768px) {
+    /* Ajustes para la navegación en tablet */
     nav {
-        width: 60px;
+        width: 60px; /* Ancho de la navegación */
     }
     
+    /* Ajustes para los enlaces de navegación en tablet */
     nav a {
-        font-size: 16px;
+        font-size: 16px; /* Tamaño de fuente */
     }
 
+    /* Ajustes para el contenedor principal en tablet */
     main {
-        left: 190px;
-        background-color: salmon;
+        left: 190px; /* Desplazamiento a la izquierda */
+        background-color: salmon; /* Nuevo color de fondo */
     }
 
+    /* Ajustes de posición y color para las cajas en tablet */
     .box{
         top: 14px;
         left: 12.9rem;
-        background-color: var(--back--box-tablet);
+        background-color: var(--back--box-tablet); /* Color de fondo para tablet */
     }
     
     .box2{
         left: 19.3rem;
         top: 11.7rem;
-        bottom: auto;
+        bottom: auto; /* Resetea el desplazamiento inferior */
         background-color: var(--back--box-tablet);
         
     }
 
     .box3{
         top: 25rem;
-        right:auto;
+        right:auto; /* Resetea el desplazamiento derecho */
         left: 30px;
         background-color: var(--back--box-tablet);
     }
     
     .box4{
         top: 11.7rem;
-        left: auto;
+        left: auto; /* Resetea el desplazamiento izquierdo */
         right: 15.5rem;
         background-color: var(--back--box-tablet);
         
@@ -123,40 +132,42 @@ main{
     
 }
 
-
-
-/* Movil */
+/* Estilos para Móvil (ancho máximo de 425px) */
 @media (max-width: 425px){
+    /* Ajustes para la navegación en móvil */
     nav{
-        height: 20px;
-        text-align: center;
+        height: 20px; /* Altura de la navegación */
+        text-align: center; /* Centra el texto */
     }
+    /* Ajustes para los enlaces de navegación en móvil */
     nav a {
-        font-size: 17px;
+        font-size: 17px; /* Tamaño de fuente */
     }
     
+    /* Ajustes para el contenedor principal en móvil */
     main {
-        bottom: auto;
-        top: 50px;
-        height: 500px;
-        width: 200px;
-        background-color: aquamarine;
+        bottom: auto; /* Resetea el desplazamiento inferior */
+        top: 50px; /* Desplazamiento superior */
+        height: 500px; /* Altura */
+        width: 200px; /* Ancho */
+        background-color: aquamarine; /* Nuevo color de fondo */
     }
 
+    /* Estilos para todas las cajas en móvil: se apilan verticalmente */
     .box,
     .box2,
     .box3,
     .box4 {
-        background-color: var(--back--box-movil);
-        position: relative;
-        display: block;
-        width: 10px;
-        margin-top: 60px;
-        padding: 20px;
-        right: auto;
-        left: 76px;
-        top: auto;
-        bottom: auto;
+        background-color: var(--back--box-movil); /* Color de fondo para móvil */
+        position: relative; /* Posicionamiento relativo */
+        display: block; /* Hace que cada caja ocupe toda la línea (apiladas) */
+        width: 10px; /* Ancho de las cajas */
+        margin-top: 60px; /* Margen superior */
+        padding: 20px; /* Padding interno */
+        right: auto; /* Resetea desplazamiento derecho */
+        left: 76px; /* Desplazamiento izquierdo */
+        top: auto; /* Resetea desplazamiento superior */
+        bottom: auto; /* Resetea desplazamiento inferior */
     }
 }
 

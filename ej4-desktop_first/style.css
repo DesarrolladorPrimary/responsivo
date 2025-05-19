@@ -1,91 +1,106 @@
+/* Estilos base para el cuerpo del documento */
 body {
-    font-family: Arial, sans-serif;
-    background: #f3f3f3;
-    color: #222;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Fuente principal y de respaldo */
+    background: #f3f3f3; /* Color de fondo gris claro */
+    color: #222; /* Color de texto oscuro */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el padding por defecto del body */
 }
 
+/* Estilos para el encabezado (header) */
 header {
-    background: #2a6ebb;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background: #2a6ebb; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 20px 0; /* Padding vertical de 20px, horizontal de 0 */
+    text-align: center; /* Centra el contenido del header */
 }
 
+/* Estilos para el contenedor de navegación (nav) */
 nav {
-    margin-top: 10px;
+    margin-top: 10px; /* Margen superior para separar del título */
 }
 
+/* Estilos para los enlaces (a) dentro de la navegación */
 nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 15px; /* Margen horizontal para separar los enlaces */
+    font-weight: bold; /* Texto en negrita */
 }
 
+/* Estilos para el contenido principal (main) - Diseño Desktop First */
 main {
-    width: 900px;
-    margin: 30px auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    min-height: 350px;
-    position: relative;
+    width: 900px; /* Ancho fijo para escritorio */
+    margin: 30px auto; /* Margen superior/inferior de 30px, centrado horizontalmente */
+    background: #fff; /* Color de fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
+    min-height: 350px; /* Altura mínima */
+    position: relative; /* Necesario si se usan elementos posicionados absolutamente dentro */
 }
 
+/* Estilos para la sección de contenido principal */
 .contenido {
-    width: 65%;
-    float: left;
-    padding: 30px;
-    box-sizing: border-box;
+    width: 65%; /* Ancho del 65% del contenedor 'main' */
+    float: left; /* Flota a la izquierda para diseño de columnas */
+    padding: 30px; /* Padding interno */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho total */
 }
 
+/* Estilos para la barra lateral (aside) */
 .lateral {
-    width: 30%;
-    float: right;
-    background: #e6ecfa;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    border-left: 2px solid #c2d2f2;
-    min-height: 100%;
+    width: 30%; /* Ancho del 30% del contenedor 'main' */
+    float: right; /* Flota a la derecha para diseño de columnas */
+    background: #e6ecfa; /* Color de fondo azul claro */
+    padding: 30px 20px; /* Padding interno */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho total */
+    border-left: 2px solid #c2d2f2; /* Borde izquierdo para separar del contenido */
+    min-height: 100%; /* Altura mínima para igualar la del contenido (puede no funcionar como esperado con float) */
 }
 
+/* Estilos para el pie de página (footer) */
 footer {
-    clear: both;
-    background: #2a6ebb;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    clear: both; /* Limpia los floats anteriores para que el footer ocupe todo el ancho */
+    background: #2a6ebb; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 15px 0; /* Padding vertical */
+    margin-top: 30px; /* Margen superior */
 }
 
+/* Media Query para tablets y pantallas medianas (hasta 1024px) */
 @media (max-width: 1024px) {
+    /* Ajusta el ancho del 'main' para que sea más fluido */
     main {
         width: 98%;
     }
+    /* Reduce el padding del contenido y la barra lateral */
     .contenido, .lateral {
         padding: 20px;
     }
 }
 
+/* Media Query para móviles y pantallas pequeñas (hasta 600px) */
 @media (max-width: 600px) {
+    /* 'main' ocupa todo el ancho y se eliminan márgenes y sombras */
     main {
         width: 100%;
         margin: 0;
         border-radius: 0;
         box-shadow: none;
-        min-height: unset;
+        min-height: unset; /* Resetea la altura mínima */
     }
+    /* El contenido y la barra lateral se apilan verticalmente */
     .contenido, .lateral {
-        float: none;
-        width: 100%;
-        border: none;
-        padding: 15px;
-        min-height: unset;
+        float: none; /* Elimina el float */
+        width: 100%; /* Ocupan todo el ancho */
+        border: none; /* Elimina bordes innecesarios */
+        padding: 15px; /* Padding reducido */
+        min-height: unset; /* Resetea la altura mínima */
     }
+    /* Estilos específicos para la barra lateral en móviles */
     .lateral {
-        background: #e6ecfa;
-        margin-top: 10px;
+        background: #e6ecfa; /* Mantiene el color de fondo */
+        margin-top: 10px; /* Añade un pequeño margen superior para separarlo del contenido */
     }
 }

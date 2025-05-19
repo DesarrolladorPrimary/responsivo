@@ -1,0 +1,83 @@
+/* Reseteo de estilos básicos para todos los elementos */
+*{
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho/alto total */
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    background-color: antiquewhite; /* Color de fondo del cuerpo */
+}
+
+/* Estilos para los enlaces dentro de la navegación del encabezado */
+header nav a{
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Color del texto */
+}
+/* Estilos para el contenedor de navegación en el encabezado */
+header nav {
+    margin: 20px; /* Margen exterior */
+}
+
+/* Estilos para el encabezado H1 */
+h1 {
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Texto en negrita */
+    margin: 0 auto; /* Centrado horizontal del bloque */
+    margin-bottom: 70px; /* Margen inferior amplio */
+}
+
+/* Estilos para el contenedor principal (main) */
+main {
+    position: relative; /* Posicionamiento relativo */
+    left: 70px; /* Desplazamiento a la izquierda (puede causar problemas de layout en responsive si no se maneja) */
+    margin: 0 auto; /* Intenta centrar, pero 'left' puede interferir. Si se quiere centrar, 'left' debería ser 0 o auto y usar solo margin. */
+}
+
+/* Estilos para las tarjetas (elementos con clase "card") */
+.card {
+    text-align: center; /* Centra el contenido de texto dentro de la tarjeta (ej. h3) */
+    background-color: whitesmoke; /* Color de fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Permite que las tarjetas se coloquen en línea y tengan dimensiones */
+    margin-bottom: 10px; /* Margen inferior */
+    margin-right: 10px; /* Margen derecho para separar tarjetas en la misma línea */
+    border: 1px solid black; /* Borde */
+    width: 250px; /* Ancho fijo */
+    height: 400px; /* Alto fijo */
+    vertical-align: top; /* Alinea las tarjetas por su parte superior cuando están en la misma línea */
+    overflow: hidden; /* Oculta el contenido que exceda las dimensiones de la tarjeta */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.card img {
+    border-bottom: 2px rgb(0, 0, 0) solid; /* Borde inferior para la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente (si es display: block) */
+    display: block; /* Hace que la imagen ocupe su propia línea y permite el centrado con margin: auto */
+    object-fit: contain; /* Escala la imagen para que quepa dentro del contenedor manteniendo la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados (puede ser redundante si la tarjeta ya los tiene y la imagen ocupa todo) */
+    width: 90%; /* Ancho de la imagen (90% del contenedor .card) */
+    height: 85%; /* Alto de la imagen (85% del contenedor .card) */
+}
+
+/* Estilos para los encabezados H3 dentro de las tarjetas */
+.card h3{
+    margin-top: 10px; /* Margen superior */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Media Query para pantallas pequeñas/móviles (hasta 600px de ancho) */
+@media (max-width: 600px){
+    /* Ajustes para el contenedor principal en móviles */
+    main {
+        left: auto; /* Resetea el desplazamiento izquierdo para un flujo normal */
+    }
+
+    /* Ajustes para las tarjetas en móviles: se apilan verticalmente */
+    .card {
+        display: block; /* Hace que cada tarjeta ocupe toda la línea (apiladas) */
+        margin: 0 auto 15px auto; /* Centra la tarjeta horizontalmente y añade margen inferior */
+    }
+}
+

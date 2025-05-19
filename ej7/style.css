@@ -1,0 +1,157 @@
+/* Estilos para el encabezado (header) */
+header{
+    text-align: start; /* Alinea el contenido del header (ej. el enlace "Volver") al inicio (izquierda) */
+}
+
+/* Estilos generales para el cuerpo (body) */
+body {
+    text-align: center; /* Centra el texto de los elementos hijos directos (como H1) */
+    font-family: Arial, sans-serif; /* Fuente por defecto si "Bungee Spice" no carga o no se aplica a todo */
+    margin: 0; /* Elimina el margen por defecto del body para evitar barras de scroll innecesarias con width: 100vw */
+    padding: 20px; /* Padding interno del body */
+    height: 100vh; /* El body ocupará el 100% de la altura del viewport */
+    width: 100vw;  /* El body ocupará el 100% del ancho del viewport */
+
+    /* Color de fondo con transparencia (RGBA) */
+    background-color: rgba(0,0,0,0.1); /* Negro con 10% de opacidad, permite ver la imagen de fondo */
+
+    /* Imagen de fondo */
+    background-image: url('galeria/planeta_namekuzei_dragon_ball_by_lwisf3rxd-d7xlm2x.png'); /* Ruta a la imagen de fondo */
+    
+    /* Posición de la imagen de fondo */
+    background-position: center center; /* Centra la imagen horizontal y verticalmente */
+
+    /* Tamaño de la imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir todo el contenedor, puede recortar partes */
+
+    /* Comportamiento de desplazamiento de la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen al fondo, no se desplaza con el contenido */
+
+    /* Fuente de Google Fonts importada (si está en el HTML o CSS) */
+    font-family: "Bungee Spice", sans-serif; /* Establece la fuente principal para el texto del body */
+
+    /* Tamaño de la fuente general */
+    font-size: large; /* Tamaño de fuente relativo "grande" */
+
+    /* Estilo de la fuente general */
+    font-style: italic; /* Establece el estilo de la fuente a itálica */
+
+    /* Peso de la fuente general */
+    font-weight: bold; /* Establece el peso de la fuente a negrita */
+}
+
+/* Estilos para las tarjetas (elementos con clase "card") */
+.card {
+    display: inline-block; /* Permite que las tarjetas se coloquen en línea y tengan dimensiones */
+    vertical-align: top; /* Alinea las tarjetas por su parte superior cuando están en la misma línea */
+    font-size: 10px; /* Tamaño de fuente específico para el contenido dentro de la tarjeta (ej. h2) */
+    height: 300px; /* Altura fija para las tarjetas */
+    width: 200px; /* Ancho fijo para las tarjetas */
+    border: 2px solid #ccc; /* Borde gris claro para las tarjetas */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1); /* Sombra más suave */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    
+}
+
+.card img {
+    text-align: center;
+    width: 100%;
+    height: 85%; /* Ajusta la altura para dejar espacio al título */
+    object-fit: contain; /* Escala la imagen manteniendo la proporción */
+    border-radius: 8px;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    margin-bottom: 10px; /* Espacio entre imagen y título */
+}
+
+.card h2 {
+    margin: 0; /* Elimina márgenes por defecto del h2 */
+    font-size: 1.5em; /* Ajusta el tamaño del título si es necesario */
+}
+
+/* Estilos individuales para las primeras 5 tarjetas */
+#card-1 {
+    background-color: #d4ff00; /* Cambia el color del fondo a amarillo */
+    
+}
+
+#card-2 {
+     color: rgb(54, 5, 248);
+     text-transform: uppercase; /* Convierte el texto a mayúsculas */
+     letter-spacing: 20px; /* Espaciado entre letras */
+     text-shadow: hwb(0 0% 0%)  2px 2px 2px; /* Sombra de texto */
+
+}
+
+#card-3 {
+    border: rgb(30, 100, 30) solid 5px;
+    
+
+}
+
+#card-4 {
+    background-color: rgb(100, 78, 12);
+}
+
+/* Aplica rem al h2 dentro de card-4 */
+#card-4 h2 {
+    font-size: 2.0rem;  /* Cambia el tamaño de la fuente a rem */
+}
+
+#card-5 {
+    box-shadow: 3px 4px 20px rgba(60,31,59); /* Sombra más intensa */
+
+}
+
+#card-6 {
+    border: rgb(20,12,60) solid 6px; /* Cambia el color del borde a azul */
+    background-color: rgb(100, 81, 194);
+    color: rgb(60,31,59);
+    padding: 1.6em; /* Padding relativo al font-size */
+    margin: 1.6em;  /* Margen relativo al font-size  */
+}
+
+#card-7 {
+    background-image: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradiente de azul a morado */
+    color: white; /* Cambia el color del texto para mejor contraste */
+}
+
+#card-8 { 
+    background-image: radial-gradient(circle, #FFEB3B, #FF9800); /* Gradiente radial de amarillo a naranja */
+    color: #333; /* Ajusta el color del texto si es necesario */
+}
+
+/* Estilos para la imagen dentro de card-8 */
+#card-8 img {
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto;   /* La altura se ajustará automáticamente para mantener la proporción */
+    display: block; /* Asegura que la imagen sea un bloque */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto;
+    /* Esto sobrescribirá la altura fija de .card img para esta imagen específica */
+}
+
+#card-9 {
+    /* px: Unidad absoluta. El borde siempre será de 3px. */
+    border: 3px solid navy;
+
+    /* rem: Relativo al font-size del elemento raíz (html).
+       Si el font-size raíz es 16px (predeterminado), 1.5rem = 24px.
+       Escala si cambia el font-size raíz. */
+    font-size: 1.5rem; /* Afecta al cálculo de 'em' abajo */
+
+    /* em: Relativo al font-size del elemento actual (#card-9).
+       Aquí, 1em = 1.5rem (el font-size que acabamos de definir).
+       Si 1.5rem = 24px, entonces padding: 1em; será 24px.
+       Escala si cambia el font-size de #card-9. */
+    padding: 1em;
+
+    /* Margen en px para comparación directa */
+    margin: 20px;
+
+    background-color: lightblue; /* Para diferenciarla visualmente */
+}

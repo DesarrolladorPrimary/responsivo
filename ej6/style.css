@@ -1,8 +1,140 @@
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+
+/* Reseteo de estilos básicos para todos los elementos */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho/alto total */
 }
 
+/* Estilos para la navegación en el encabezado (base/desktop) */
+header nav {
+    text-align: center; /* Centra el texto del enlace */
+    margin: 20px; /* Margen exterior */
+    border: 1px solid black; /* Borde */
+    border-radius: 20px; /* Bordes redondeados */
+    width: 60px; /* Ancho fijo pequeño, probablemente para un solo enlace "Volver" */
+}
+/* Estilos para los enlaces en el encabezado */
+header a {
+    text-decoration: none; /* Elimina el subrayado */
+}
 
+/* Estilos para el encabezado H1 (base/desktop) */
+h1 {
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+    text-align: center; /* Centra el texto */
+    margin: 20px; /* Margen exterior */
+}
+
+/* Estilos para el contenedor principal (main) (base/desktop) */
+main {
+    background-color: rgb(80, 216, 87); /* Color de fondo verde */
+    padding: 20px; /* Padding interno */
+    border: 1px solid black; /* Borde */
+    margin: 0 auto; /* Centrado horizontal */
+    width: 600px; /* Ancho fijo */
+    height: 300px; /* Alto fijo */
+}
+
+/* Estilos para los párrafos dentro de las secciones (base/desktop) */
+section p {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente sans-serif estándar */
+    margin: 10px; /* Margen exterior */
+}
+
+/* Media Query para Tablets (ancho entre 425px y 768px) */
+@media (min-width:425px) and (max-width: 768px){
+    /* Estilos para H1 en tablet */
+    h1 {
+        position: relative; /* Permite ajustar la posición */
+        bottom: 20px; /* Sube el H1 ligeramente */
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Nueva fuente */
+        font-weight: bold; /* Texto en negrita */
+        font-size: 40px; /* Tamaño de fuente */
+    }
+
+    /* Estilos para main en tablet */
+    main {
+        width: 400px; /* Ancho reducido */
+        height: 400px; /* Alto aumentado */
+    }
+
+    /* Estilos para section en tablet (afecta al texto dentro si no hay otro selector más específico) */
+    section{
+        font-size: 20px; /* Tamaño de fuente para el contenido de la sección */
+    }
+    /* Estilos para párrafos dentro de section en tablet */
+    section p{
+        font-family: "Dancing Script", cursive;; /* Fuente cursiva */
+    }
+}
+
+/* Media Query para Móviles (ancho máximo de 424px) */
+@media (max-width: 424px) {
+    /* Estilos para H1 en móvil */
+    h1 {
+        font-size: 26px; /* Tamaño de fuente reducido */
+        font-family: "Playwrite DK Loopet", cursive; /* Fuente cursiva decorativa */
+        color: #fff; /* Color de texto blanco */
+        background: #ff9800; /* Fondo naranja */
+        border-radius: 12px; /* Bordes redondeados */
+        padding: 8px 0; /* Padding vertical */
+        margin: 12px 10px; /* Margen exterior */
+        letter-spacing: 2px; /* Espaciado entre letras */
+        text-shadow: 1px 1px 2px #333; /* Sombra de texto */
+    }
+    /* Estilos para main en móvil */
+    main {
+        width: 98vw; /* Ancho casi completo del viewport */
+        height: auto; /* Altura automática según el contenido */
+        padding: 12px 4px; /* Padding interno */
+        background: linear-gradient(135deg, #51e2f5 0%, #9df9ef 100%); /* Fondo con gradiente */
+        border-radius: 10px; /* Bordes redondeados */
+        border: 2px solid #ff9800; /* Borde naranja */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
+    }
+    /* Estilos para section en móvil */
+    section {
+        font-size: 17px; /* Tamaño de fuente */
+        /* font-family: "Playwrite DK Loopet", cursive; Ya se hereda de la regla anterior si no se sobreescribe */
+        color: #333; /* Color de texto oscuro */
+        margin: 12px 0; /* Margen vertical */
+    }
+    /* Estilos para párrafos dentro de section en móvil */
+    section p {
+        font-size: 12px; /* Tamaño de fuente más pequeño para párrafos */
+        font-weight: lighter; /* Fuente más ligera */
+        /* font-family: "Playwrite DK Loopet", cursive; Se hereda si no se especifica otra */
+    }
+    /* Estilos para la navegación del header en móvil */
+    header nav {
+        width: 96vw; /* Ancho casi completo del viewport */
+        margin: 8px auto; /* Margen y centrado */
+        font-size: 17px; /* Tamaño de fuente */
+        background: #ff9800; /* Fondo naranja */
+        border-radius: 10px; /* Bordes redondeados */
+        border: 2px solid #fff; /* Borde blanco */
+        box-shadow: 0 1px 4px rgba(0,0,0,0.07); /* Sombra sutil */
+    }
+    /* Estilos para enlaces del header en móvil */
+    header a {
+        color: #fff; /* Color de texto blanco */
+        font-weight: bold; /* Texto en negrita */
+    }
+}
+/* Esta sección parece ser un duplicado o un error, ya que @media (max-width: 424px) ya está definida arriba.
+   La regla 'section' y 'header nav' aquí sobreescribirían las de la media query anterior si el navegador las procesa después.
+   Se recomienda consolidar los estilos para (max-width: 424px) en un solo bloque.
+*/
+    /* section {
+        font-size: 16px;
+        font-family: "Dancing Script", cursive;
+    }
+    header nav {
+        width: 90vw;
+        margin: 10px auto;
+        font-size: 16px;
+    } */
 

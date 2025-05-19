@@ -1,9 +1,12 @@
+/* Estilos generales para el cuerpo y la navegación en pantallas de móvil */
 /*Movil*/
 @media (max-width: 480px){
+    /* Alineación del texto para los enlaces de navegación en el encabezado */
     header nav a{
         text-align: start;
     }
 
+    /* Estilos base para el cuerpo: color de fondo, color de texto, sin borde y tamaño de fuente */
     body{
         background-color: white;
         color: black;
@@ -11,42 +14,51 @@
         font-size: 20px;
     }
 
+    /* Oculta los elementos con la clase 'desktop' en móviles */
     .desktop {
         display: none;
     }
 
+    /* Oculta los elementos con la clase 'tablet' en móviles */
     .tablet {
         display: none;
     }
 }
 
+/* Estilos para pantallas de tablet */
 /*Tablet*/
 @media (min-width: 481px) and (max-width: 768px) {
+    /* Alineación del texto para los enlaces de navegación en el encabezado */
     header nav a{
         text-align: start;
     }
     
+    /* Estilos para el cuerpo en tablets: color de fondo y color de texto */
     body{
         background-color: rgb(10, 223, 238);
         color: rgb(255, 0, 242);
     }
 
+    /* Oculta los elementos con la clase 'desktop' en tablets */
     .desktop {
         display: none;
     }
 
+    /* Oculta los elementos con la clase 'movil' en tablets */
     .movil {
         display: none;
     }
 }
 
-
+/* Estilos para pantallas de escritorio */
 /*Desktop*/
 @media (min-width: 769px){
+    /* Alineación del texto para los enlaces de navegación en el encabezado */
     header nav a{
         text-align: start;
     }
 
+    /* Estilos para el cuerpo en escritorio: padding, alineación de texto, color de fondo y color de texto */
     body{
         padding: auto;
         text-align: center;
@@ -54,6 +66,7 @@
         color: brown;
     }
 
+    /* Estilos para el contenedor adaptable: margen, borde, ancho y radio de borde */
     .adap{
         margin: 0 auto;
         border: 2px black solid;
@@ -61,29 +74,34 @@
         border-radius:  10px;
     }
 
+    /* Estilos para los elementos 'desktop': padding superior y tamaño de fuente */
     .desktop {
         padding-top: 10px ;
         font-size: 20px;
     }
 
+    /* Hace que los párrafos dentro de 'desktop' se muestren en línea */
     .desktop p {
         display: inline;
     }
 
+    /* Agrega un corchete de apertura antes del contenido de 'desktop' */
     .desktop::before{
         display: inline;
         content: "[";
     }
 
+    /* Agrega un corchete de cierre después del contenido de 'desktop' */
     .desktop::after {
         content: "]";
     }
 
-
+    /* Oculta los elementos con la clase 'movil' en escritorio */
     .movil {
         display: none;
     }
 
+    /* Oculta los elementos con la clase 'tablet' en escritorio */
     .tablet {
         display: none;
     }

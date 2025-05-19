@@ -1,195 +1,214 @@
+/* Reseteo de estilos básicos para todos los elementos */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    box-sizing: border-box; /* El padding y borde se incluyen en el ancho/alto total */
 }
 
+/* Definición de una variable CSS para el color del botón */
 :root {
-    --color-boton: rgba(60, 154, 118, 0);
+    --color-boton: rgba(60, 154, 118, 0); /* Color base para botones (actualmente transparente) */
 }
 
+/* Estilos generales para el cuerpo */
 body {
-    background-color: aliceblue;
+    background-color: aliceblue; /* Color de fondo del cuerpo */
 }
 
-
+/* Estilos para el botón de hamburguesa (menú móvil) */
 .btn-hamburguer {
-    margin: 6px;
-    background-color: transparent;
-    padding: 2px;
+    margin: 6px; /* Margen alrededor del botón */
+    background-color: transparent; /* Fondo transparente */
+    padding: 2px; /* Padding interno */
 }
 
+/* Estilos para el enlace dentro del botón de hamburguesa */
 .btn-hamburguer a{
-    text-decoration: none;
-    color: black;
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Color del texto/icono */
 }
 
+/* Estilos para el botón de hamburguesa al pasar el ratón (hover) */
 .btn-hamburguer:hover{
-    transition: 1s;
-    border-radius: 100px;
-    border-color: black;
-    background-color: rgba(0, 0, 0, 0.142);
+    transition: 1s; /* Transición suave */
+    border-radius: 100px; /* Bordes completamente redondeados */
+    border-color: black; /* Color del borde */
+    background-color: rgba(0, 0, 0, 0.142); /* Fondo ligeramente oscuro */
 }
 
+/* Estilos para la columna de navegación (menú lateral) */
 .nav-column {
-    position: fixed;
-    width: 100px;
-    height: 50%;
-    border: 2px solid black;
-    z-index: 10;
-    background-color: rgb(249, 249, 249);
+    position: fixed; /* Posición fija en la pantalla */
+    width: 100px; /* Ancho del menú */
+    height: 50%; /* Altura del menú (50% del viewport) */
+    border: 2px solid black; /* Borde del menú */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    background-color: rgb(249, 249, 249); /* Color de fondo del menú */
+    transition: 1s; /* Transición suave para mostrar/ocultar */
+    display: none; /* Oculto por defecto */
 }
 
+/* Estilos para el contenedor de navegación dentro de la columna */
 .nav {
-    margin: 20px;
+    margin: 20px; /* Margen interno */
 }
 
+/* Estilos para la lista desordenada (ul) dentro de la navegación */
 .nav ul {
-    list-style: none;
+    list-style: none; /* Elimina los puntos de la lista */
 }
 
+/* Estilos para los enlaces (a) dentro de la navegación */
 .nav a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Color del texto */
 }
 
+/* Estilos para los elementos de lista (li), excepto el primero */
 .nav ul li:not(:first-child) {
-    margin-top: 50px;
-    color: black;
-}
-.nav-column {
-    transition: 1s;
-    display: none;
+    margin-top: 50px; /* Margen superior para separar elementos */
+    color: black; /* Color del texto (redundante si .nav a ya lo tiene) */
 }
 
+/* Muestra el menú lateral cuando es el objetivo del enlace (ej. #nav-column) */
 .nav-column:target {
-    transition: 1s;
-    display: block;
+    transition: 1s; /* Transición suave */
+    display: block; /* Muestra el menú */
 }
 
+/* Estilos para el enlace "Volver" */
 .volver {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 20px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Margen inferior */
 }
 
-
+/* Estilos para el contenedor principal (main) */
 main{
-    box-shadow: 4px 4px 1px 0px black;
-    text-align: center;
-    position: relative;
-    margin: 0 auto;
-    border: 1px black solid;
-    border-radius: 10px;
-    width: 330px;
-    height: 30rem;
-    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 1px 0px black; /* Sombra de caja */
+    text-align: center; /* Centra el contenido de texto */
+    position: relative; /* Posicionamiento relativo */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    border: 1px black solid; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 330px; /* Ancho */
+    height: 30rem; /* Alto en unidades rem */
+    background-color: rgb(255, 255, 255); /* Color de fondo */
 }
 
+/* Estilos para el contenedor del formulario */
 .form{
-    display: inline-block;
-    margin-top: 60px;
+    display: inline-block; /* Permite que se comporte como bloque pero fluya con el texto */
+    margin-top: 60px; /* Margen superior */
 }
 
-
-
+/* Estilos para el encabezado H1 */
 h1 {
-    font-size: 60px;
-    margin-top: 20px;
-    color: rgb(89, 0, 255);
+    font-size: 60px; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen superior */
+    color: rgb(89, 0, 255); /* Color del texto */
 }
 
-
+/* Estilos para el div que contiene el campo de email */
 .email {
-    position: relative;
-    bottom: 30px;
+    position: relative; /* Posicionamiento relativo */
+    bottom: 30px; /* Desplazamiento hacia abajo */
 }
 
+/* Estilos para el div que contiene el campo de contraseña */
 .passwd{
-    position: relative;
-    bottom: 20px;
+    position: relative; /* Posicionamiento relativo */
+    bottom: 20px; /* Desplazamiento hacia abajo */
 }
 
-
+/* Estilos para las etiquetas (label) del formulario */
 label {
-    display: block;
-    font-size: 23px;
-    font-weight: bold;
-    text-align: start;
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    font-size: 23px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-align: start; /* Alineación del texto al inicio */
 }
 
+/* Estilos para los campos de entrada (input) */
 input{
-    border: 1px black solid;
-    border-radius: 5px;
-    width: 250px;
-    height: 30px;
-    margin-bottom: 20px;
+    border: 1px black solid; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 250px; /* Ancho */
+    height: 30px; /* Alto */
+    margin-bottom: 20px; /* Margen inferior */
 }
 
-
+/* Estilos para los campos de entrada al pasar el ratón (hover) */
 input:hover{
-    background-color: azure;
+    background-color: azure; /* Cambio de color de fondo */
 }
 
-
+/* Estilos para el botón de envío del formulario */
 .button {
-    margin-top: 20px;
-    width: 80%;
-    font-size: 16px;
-    padding: 10px;
-    background-color: var(--color-boton);
-    color: rgb(45, 0, 246);
-    border: 2px rgb(0, 0, 0) solid;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 20px; /* Margen superior */
+    width: 80%; /* Ancho (80% del contenedor padre) */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px; /* Padding interno */
+    background-color: var(--color-boton); /* Color de fondo usando la variable */
+    color: rgb(45, 0, 246); /* Color del texto */
+    border: 2px rgb(0, 0, 0) solid; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
 }
 
-
+/* Estilos para el botón al pasar el ratón (hover) */
 .button:hover{
-    background-color: blue;
-    color: azure;
+    background-color: blue; /* Cambio de color de fondo */
+    color: azure; /* Cambio de color de texto */
 }
 
-
+/* Estilos para pantallas de escritorio (ancho mínimo de 1024px) - Enfoque Mobile First */
 @media (min-width: 1024px) {
+    /* Ajustes para el contenedor principal en escritorio */
     main{
-        position: relative;
-        top: 80px;
-        box-shadow: 0 0 10px rgba(3, 4, 3, 0.1);
-        width: 50rem;
-        background-color: rgb(255, 255, 255);
+        position: relative; /* Posicionamiento relativo */
+        top: 80px; /* Desplazamiento superior */
+        box-shadow: 0 0 10px rgba(3, 4, 3, 0.1); /* Sombra más suave */
+        width: 50rem; /* Ancho en unidades rem */
+        background-color: rgb(255, 255, 255); /* Color de fondo */
     }
 
+    /* Oculta el botón de hamburguesa en escritorio */
     .btn-hamburguer {
         display: none;
     }
 
+    /* Estilos para la columna de navegación en escritorio (se convierte en barra superior) */
     .nav-column {
-        position: fixed;
-        display: block;
-        width: 100%;
-        height: 60px;
+        position: fixed; /* Posición fija */
+        display: block; /* Siempre visible */
+        width: 100%; /* Ocupa todo el ancho */
+        height: 60px; /* Altura de la barra de navegación */
     }
 
+    /* Hace que los elementos de la lista de navegación se muestren en línea */
     .nav li {
         display: inline;
     }
 
+    /* Estilos para los elementos de navegación (excepto el primero) para espaciarlos */
     .nav :not(:first-child){
-        position: relative;
-        left: 100px;
-        margin-left: 180px;
-
+        position: relative; /* Posicionamiento relativo */
+        left: 100px; /* Desplazamiento a la izquierda */
+        margin-left: 180px; /* Margen izquierdo adicional */
     }
+    /* Elimina el borde del header en escritorio (si lo tuviera) */
     header{
         border: none;
     }
 
+    /* Ajustes para el H1 en escritorio */
     h1{
-        color: rgb(62, 62, 235);
-        font-size: 90px;
+        color: rgb(62, 62, 235); /* Nuevo color */
+        font-size: 90px; /* Tamaño de fuente más grande */
     }
 
+    /* Estilo para campos de entrada requeridos (puede usarse para validación visual) */
     input:required{
-        border-color: red;
+        border-color: red; /* Borde rojo si el campo es requerido y está vacío (depende del navegador) */
     }
 }

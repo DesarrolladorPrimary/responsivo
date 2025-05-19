@@ -1,0 +1,109 @@
+/* Estilos generales para la pantalla */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.no-imprimir {
+    background-color: #ffdddd;
+    border: 1px dashed #f00;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #ff0000;
+}
+
+/* Estilos específicos para impresión */
+@media print {
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 1cm; /* Margen para impresión */
+        background-color: #fff; /* Fondo blanco obligatorio */
+        color: #000; /* Texto negro obligatorio */
+        line-height: 1.4;
+    }
+
+    header, nav, footer.no-imprimir, .no-imprimir {
+        display: none; /* Ocultar elementos no deseados */
+    }
+
+    article {
+        border: none; /* Sin bordes en la impresión */
+        padding: 0;
+        margin-top: 0;
+        width: 100%; /* Usar todo el ancho disponible */
+        box-shadow: none; /* Sin sombras */
+    }
+
+    h1, h2 {
+        color: #000; /* Asegurar que los encabezados sean negros */
+        page-break-after: avoid; /* Evitar saltos de página después de encabezados */
+    }
+
+    p {
+        orphans: 3; /* Mínimo de líneas al final de una página antes de un salto */
+        widows: 3;  /* Mínimo de líneas al inicio de una página después de un salto */
+    }
+
+    a {
+        text-decoration: none; /* Quitar subrayado */
+        color: #000; /* Enlaces en negro */
+    }
+
+    /* Mostrar URL de los enlaces entre paréntesis después del texto del enlace */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #333; /* Un gris oscuro para la URL */
+    }
+
+    /* Evitar saltos de página dentro de elementos específicos */
+    h1, h2, h3, h4, h5, h6, p, ul, ol {
+        page-break-inside: avoid;
+    }
+}
