@@ -1,3 +1,4 @@
+/* Reseteo básico: quitamos márgenes y paddings por defecto de los navegadores */
 *{ /* Esto es como un "para todo el mundo": quita los rellenos y márgenes que los navegadores ponen por defecto */
     padding: 0;
     margin: 0;
@@ -5,13 +6,14 @@
 }
 
 
-
+/* Estilos para la barra de navegación en el encabezado */
 header nav { /* Para la barra de navegación que está en el encabezado */
     text-align: start; /* Alinea el texto a la izquierda (o al inicio, según el idioma) */
     background-color: rgba(103, 194, 234, 0.598); /* Un color de fondo azulito medio transparente */
     height: 40px; /* Le da una altura fija de 40 píxeles */
 }
 
+/* Estilos para los enlaces dentro del encabezado (ej. "Volver") */
 header a { /* Para los enlaces (como el de "Volver") que están en el encabezado */
     position: relative; /* Permite moverlo un poquito desde su sitio original */
     top: 10px; /* Lo baja 10 píxeles desde arriba */
@@ -20,12 +22,12 @@ header a { /* Para los enlaces (como el de "Volver") que están en el encabezado
     text-decoration: none; /* Le quita el subrayado típico de los enlaces */
 }
 
-
+/* Estilos para el contenedor principal donde está el formulario */
 main { /* El contenedor principal de la página, donde está el formulario */
     background-color: aliceblue; /* Un color de fondo azul pálido, como de cuento */
     border-radius: 10px; /* Redondea las esquinas para que no se vea tan cuadrado */
     position: relative; /* Permite ajustar su posición */
-    top: 40px; /* Lo baja 100 píxeles desde donde estaría normalmente */
+    top: 40px; /* Lo baja un poco desde donde estaría normalmente */
     max-width: 60rem;  /* Ancho máximo, para que no se estire demasiado en pantallas grandes (1rem es como el tamaño de la letra 'M') */
     width: 90%;        /* Ocupa el 90% del ancho disponible, así se adapta un poco */
     border: 1px solid black; /* Un borde negro finito alrededor */

@@ -1,89 +1,102 @@
+/* Reseteo universal: quitamos márgenes y paddings por defecto y ajustamos el modelo de caja */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Sin margen exterior por defecto */
+    padding: 0; /* Sin relleno interior por defecto */
+    box-sizing: border-box; /* El padding y el borde se cuentan dentro del ancho y alto total del elemento */
 }
 
+/* Estilos para la navegación en el encabezado (probablemente un enlace "Volver") */
 header nav {
-    text-align: center;
-    width: 60px;
-    margin: 10px;
-    border: 1px solid black;
+    text-align: center; /* Centra el texto del enlace (si solo hay uno) */
+    width: 60px; /* Un ancho pequeño, para que no ocupe mucho */
+    margin: 10px; /* Un poco de espacio alrededor */
+    border: 1px solid black; /* Un borde simple para que se vea el área del enlace */
 }
 
+/* Estilos para los enlaces dentro del encabezado */
 header a {
-    text-decoration: none;
-    color: #000;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #000; /* Texto del enlace en color negro */
 }
 
-
+/* Estilos para el contenedor principal (main) */
 main {
-    box-shadow: 3px 3px 1px  black;
-    background-color: rgb(80, 216, 87); /* Color de fondo verde */
-    padding: 20px; /* Padding interno */
-    border: 1px solid black; /* Borde */
-    margin: 0 auto; /* Centrado horizontal */
-    width: 60rem; /* Ancho fijo */
+    box-shadow: 3px 3px 1px  black; /* Una sombra sutil para darle profundidad */
+    background-color: rgb(80, 216, 87); /* Color de fondo verde brillante */
+    padding: 20px; /* Espacio interior alrededor del contenido */
+    border: 1px solid black; /* Un borde negro alrededor */
+    margin: 0 auto; /* Centra el 'main' horizontalmente en la página */
+    width: 60rem; /* Ancho fijo (60 veces el tamaño de la fuente base del navegador), pensado para escritorio */
     height: 300px; /* Alto fijo */
 }
 
-
+/* Contenedor para la imagen de escritorio */
 .img_desktop {
-    text-align: center;
+    text-align: center; /* Centra la imagen y su título si son elementos en línea o bloque con margen auto */
 }
 
+/* Título para la imagen de escritorio */
 .img_desktop h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacio debajo del título, antes de la imagen */
 }
 
+/* Estilos para la imagen de escritorio */
 .img_desktop img{
-    box-shadow: 0 7px 10px 3px ;
+    box-shadow: 0 7px 10px 3px ; /* Una sombra más pronunciada para la imagen */
 }
 
+/* Por defecto, las imágenes de tablet y móvil están ocultas */
 .img_tablet{
-    display: none;
+    display: none; /* No se muestra */
 }
 
 .img_movil{
-    display: none;
+    display: none; /* No se muestra */
 }
 
-
+/* Media Query para Tablets: cuando la pantalla tiene entre 426px y 768px de ancho */
 @media (min-width: 426px) and (max-width: 768px) {
+    /* Ajustes para el 'main' en tablets */
     main {
-        margin-top: 80px ;
-        width: 44rem;
-        background-color: aqua;
-        box-shadow: -7px 0 80px;
+        margin-top: 80px ; /* Más espacio arriba */
+        width: 44rem; /* Un poco más estrecho que en escritorio */
+        background-color: aqua; /* Cambiamos el fondo a color aqua */
+        box-shadow: -7px 0 80px; /* Una sombra diferente, más difuminada y a la izquierda */
     }
     
+    /* Ocultamos la imagen de escritorio */
     .img_desktop {
         display: none;
     }
 
+    /* Mostramos la imagen de tablet */
     .img_tablet {
-        display: block;
+        display: block; /* Hacemos que sea visible */
     }
 
+    /* Título para la imagen de tablet */
     .img_tablet h2 {
-        font-size: 2.6rem;
-        color: white;
-        text-shadow: 3px 3px 3px  black ;
+        font-size: 2.6rem; /* Tamaño de letra más grande */
+        color: white; /* Texto blanco */
+        text-shadow: 3px 3px 3px  black ; /* Sombra para el texto, para que resalte sobre la imagen si es necesario */
     }
 
+    /* Estilos para la imagen de tablet */
     .img_tablet img {
-        position: relative;
-        bottom: 100px;
-        left: 15rem;
-        width: 400px;
+        position: relative; /* Para poder moverla un poco */
+        bottom: 100px; /* La subimos un poco */
+        left: 15rem; /* La movemos a la derecha */
+        width: 400px; /* Un ancho específico para la imagen en tablet */
     }
 }
 
+/* Media Query para Móviles: cuando la pantalla tiene 425px de ancho o menos */
 @media (max-width: 425px){
+    /* Ajustes para el 'main' en móviles */
     main {
-        width: 15rem;
-        height: 7rem;
-        background-color: #5312ea;
+        width: 15rem; /* Mucho más estrecho */
+        height: 7rem; /* Y más bajo, quizás solo para mostrar un texto o una imagen pequeña */
+        background-color: #5312ea; /* Cambiamos el fondo a un morado */
     }
 
     .img_desktop {
